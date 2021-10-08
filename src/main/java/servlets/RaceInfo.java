@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet("/race/id")
+@WebServlet("/race")
 public class RaceInfo extends HttpServlet {
 
     @Override

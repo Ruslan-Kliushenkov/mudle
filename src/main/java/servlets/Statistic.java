@@ -23,7 +23,7 @@ public class Statistic extends HttpServlet {
 
         PrintWriter answer = resp.getWriter();
 
-        answer.println(new ObjectMapper().writeValueAsString(traceDao.getTraces()));
+        answer.print(new ObjectMapper().writeValueAsString(traceDao.getTraces()));
 
     }
 

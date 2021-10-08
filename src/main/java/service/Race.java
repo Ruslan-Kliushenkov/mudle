@@ -6,6 +6,7 @@ import entities.Horse;
 import entities.ListOfHorse;
 import entities.Trace;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,6 +43,7 @@ public class Race {
         }
 
         trace.setBetOn(bet);
+        trace.setTime(String.valueOf(LocalDateTime.now()));
         traceDao.createTrace(trace);
 
         ListOfHorse.clearTheList();

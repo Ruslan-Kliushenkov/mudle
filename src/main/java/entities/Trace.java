@@ -3,6 +3,8 @@ package entities;
 import entities.Horse;
 
 import javax.persistence.*;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -16,6 +18,20 @@ public class Trace {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
 
+    @Column(name = "Date")
+    private String time;
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
+    }
+
+    public void setHorseList(List<Horse> horseList) {
+        this.horseList = horseList;
+    }
 
     @OneToMany(fetch = FetchType.EAGER,mappedBy = "race",cascade = CascadeType.ALL)
     private List<Horse> horseList = new ArrayList<>();
